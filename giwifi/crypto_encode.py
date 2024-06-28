@@ -9,19 +9,14 @@ def zero_pad(data, block_size):
 
 
 def crypto_encode(ori_data, iv):
-    key = b'1234567887654321'  # 16 bytes key
-    ivv = iv.encode('utf-8')  # Encode IV to bytes
+    key = b'1234567887654321'
+    ivv = iv.encode('utf-8')
 
-    ori_data = ori_data.replace("://", "%3A%2F%2F")
-
-    # Zero padding the data
     padded_data = zero_pad(ori_data.encode('utf-8'), 16)
 
-    # Create cipher object and encrypt
     cipher = Cipher(algorithms.AES(key), modes.CBC(ivv),
                     backend=default_backend())
     encryptor = cipher.encryptor()
     encrypted_data = encryptor.update(padded_data) + encryptor.finalize()
 
-    # Return base64 encoded string of the encrypted data
     return b64encode(encrypted_data).decode('utf-8')
