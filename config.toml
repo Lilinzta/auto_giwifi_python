@@ -1,0 +1,8 @@
+# 校园网网关ip，LIT用户无需更改
+base_url = "http://10.189.1.3"
+# 打开浏览器，手动登录认证一次，获取地址栏url填入下面，LIT用户应该只需更改最后的ip地址(即校园网分配的ip地址)即可
+open_url = "http://10.189.1.3/gportal/web/login?wlanacname=LITBAS4&wlanuserip=172.24.23.227"
+
+[user_info]
+uname = "YOUR_USERNAME"
+passwd = "YOUR_PASSWORD"
