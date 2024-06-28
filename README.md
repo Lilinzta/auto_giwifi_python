@@ -1,6 +1,6 @@
 # 介绍
 
-一个使用 selenium 实现的 giwif 自动登录脚本(适用于 LIT) ，默认每9分半重新登陆一次以实现白嫖。
+一个使用 selenium 实现的 giwif 自动登录脚本(适用于 LIT) ，默认每9分55秒重新登陆一次以实现白嫖。
 
 > 宇宙免责声明: 本项目仅用于学习，不得用于非法用途，否则一切后果自负。
 
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 # 校园网网关ip，LIT用户无需更改
 base_url = "http://10.189.1.3"
 # 打开浏览器，手动登录认证一次，获取地址栏url填入下面，LIT用户应该只需更改最后的ip地址(即校园网分配的ip地址)即可
-open_url = "http://10.189.1.3/gportal/web/login?wlanacname=LITBAS4&wlanuserip=172.24.23.227"
+login_url = "http://10.189.1.3/gportal/web/login?wlanacname=LITBAS4&wlanuserip=172.24.23.227"
 
 [user_info]
 uname = "YOUR_USERNAME"

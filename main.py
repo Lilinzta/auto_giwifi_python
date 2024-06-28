@@ -1,10 +1,6 @@
-from giwifi.logout import logout
-from giwifi.login import login
-import logging
+from utils.giwifi import giwifi
 import time
 import toml
-
-logging.disable(logging.CRITICAL)
 
 with open('config.toml', 'r') as file:
     config = toml.load(file)
@@ -18,7 +14,7 @@ user_info = {
 }
 
 base_url = config['base_url']
-open_url = config['open_url']
+login_url = config['login_url']
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0',
@@ -26,8 +22,11 @@ headers = {
 }
 
 if __name__ == "__main__":
+
+    giwifi = giwifi(base_url, login_url)
     while True:
-        logout(base_url, headers, user_info)
-        login(uname, passwd, open_url)
-        print("sleep 9m30s for next login")
-        time.sleep(570)
+        giwifi.logout(headers, user_info)
+        giwifi.login(uname, passwd)
+        print("sleep 9m55s for next login")
+        time.sleep(595)
+    giwifi.close()
