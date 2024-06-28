@@ -37,6 +37,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+因为使用到了 selenium，所以需要安装 firefox 浏览器对应版本的 geckodriver
+
 3. 修改 config.toml 配置文件
 
 ```toml
