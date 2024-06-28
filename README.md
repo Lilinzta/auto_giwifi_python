@@ -31,6 +31,12 @@ python -m venv venv
 source venv/bin/activate
 ```
 
+2.5 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
 3. 修改 config.toml 配置文件
 
 ```toml
@@ -49,4 +55,3 @@ passwd = "YOUR_PASSWORD"
 ```bash
 python main.py
 ```
-
