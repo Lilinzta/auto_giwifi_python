@@ -31,7 +31,7 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-2.5 安装依赖
+3. 安装依赖
 
 ```bash
 pip install -r requirements.txt
@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 因为使用到了 selenium，所以需要安装 firefox 浏览器对应版本的 geckodriver
 
-3. 修改 config.toml 配置文件
+4. 修改 config.toml 配置文件
 
 ```toml
 # 校园网网关ip，LIT用户无需更改
@@ -52,7 +52,7 @@ uname = "YOUR_USERNAME"
 passwd = "YOUR_PASSWORD"
 ```
 
-4. 运行
+5. 运行
 
 ```bash
 python main.py
